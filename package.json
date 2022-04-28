@@ -1,0 +1,27 @@
+{
+  "name": "jest-str-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexisSarlatYnov/jest-str-calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexisSarlatYnov/jest-str-calculator/issues"
+  },
+  "homepage": "https://github.com/AlexisSarlatYnov/jest-str-calculator#readme",
+  "dependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "babel": "^6.23.0",
+    "core-js": "^3.22.3",
+    "jest": "^28.0.2"
+  }
+}
