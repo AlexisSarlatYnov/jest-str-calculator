@@ -4,24 +4,22 @@ class StringCalculator {
 
   add(numbers){
     let delimiterFound = new RegExp(/(\/\/.+\n)+/g).test(numbers);
-    if(delimiterFound == true){
-      let delimiter = numbers.match(/(\/\/.+\n)+/g);
-      numbers.replace(delimiter);
-      delimiter = delimiter.toString()
-      // delimiter.replace(/\/\//g);
-      delimiter = delimiter.substring(2, delimiter.length);
-      delimiter.replace(/\n/);
+    let numbers2 = numbers;
+    if(delimiterFound){
+      let delimiter = numbers.charAt(2);
       console.log(delimiter);
-      console.log(numbers);
+      numbers2 = numbers.split('\n')[1];
+      numbers2.replaceAll(delimiter, ',');
+      console.log(numbers2);
     }
-    let tabNumbers = numbers.split(/[,\n${delimiter}]/);
+    let tabNumbers = numbers2.split(/[,\n]/);
     let somme = 0;
     // let i = 0;
     // while(i<2 && tabNumbers[i]){
     //   somme += parseInt(tabNumbers[i]);
     //   i++;
     // }
-    if(numbers != ''){
+    if(numbers2 != ''){
       tabNumbers.forEach(element => {
         somme += parseInt(element);
       });
